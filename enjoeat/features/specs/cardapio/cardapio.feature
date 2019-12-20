@@ -5,6 +5,10 @@ Funcionalidade: Cardápio
   Sendo um usuário que escolheu um restaurante
   Posso acessar um cardápio
 
+  # Contexto é ultilizado para aproveitar os steps para ambos os cenários
+  Contexto: Restaurantes
+    Dado que acesso a lista de restaurantes
+
   Cenario: Produto
 
     Dado que acesso a lista de restaurantes
