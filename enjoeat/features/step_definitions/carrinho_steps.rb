@@ -49,13 +49,10 @@ end
 Dado("que eu tenho os seguintes itens no carrinho:") do |table|
   @productList = table.hashes
 
-  # Utilizamos a mesma lógica para de adicionar produto, pois para seguir o
-  # cenário de remover o produto, precisaremos de produtos adicionados
-  @productList.each do |produto| # para cada produto vindo da variável @productList, faça:
-    produto["quantidade"].to_i.times do
-      find(".menu-item-info-box", text: produto["nome"].upcase).find(".add-to-cart").click
-    end
-  end
+  # dynamic step (steps compartilhados)
+  steps %{
+    Quando eu adiciono todos os itens
+  }
 end
 
 Quando("eu removo somente o {int}") do |item|

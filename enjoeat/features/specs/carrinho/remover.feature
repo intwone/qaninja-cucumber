@@ -1,6 +1,6 @@
 #language:pt
 
-@breadAndBakery
+@breadAndBakery @temp
 
 Funcionalidade: Remover item do carrinho
   Para que eu possa manter o meu carrinho apenas com itens desejados
@@ -41,8 +41,8 @@ Funcionalidade: Remover item do carrinho
     Quando eu removo todos os itens
     Então vejo a seguinte mensagem no carrinho "Seu carrinho está vazio!"
 
-  @temp
-  Cenario: Limpar carrinho
 
+  Cenario: Limpar carrinho
+  
     Quando eu limpo o carrinho
     Então vejo a seguinte mensagem no carrinho "Seu carrinho está vazio!"
