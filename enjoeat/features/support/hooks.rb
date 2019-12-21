@@ -1,6 +1,9 @@
 Before do
   page.current_window.resize_to(1440, 900)
-  @cart = Cart.new
+
+  @restaurantMenuPage = RestaurantMenuPage.new
+  @restaurantListPage = RestaurantListPage.new
+  @cartPage = CartView.new
 end
 
 Before("@breadAndBakery") do

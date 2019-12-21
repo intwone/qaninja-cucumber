@@ -1,4 +1,4 @@
-class Cart
+class CartView
   include Capybara::DSL
 
   def carBox
@@ -11,5 +11,9 @@ class Cart
 
   def removeItem(item)
     carBox.all("table tbody tr")[item].find(".danger").click # cart.all retorna todos os elementos
+  end
+
+  def clearCart
+    click_button "Limpar"
   end
 end

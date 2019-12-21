@@ -4,11 +4,11 @@ end
 
 Quando("acesso a lista de restaurantes") do
   # Abre o browser na página desejada
-  visit "/restaurants"
+  @restaurantListPage.loadPage
 end
 
 Então("devo ver todos os restaurantes desta lista") do
-  restaurants = all(".restaurant-item")
+  restaurants = @restaurantListPage.listRestaurant
 
   @restaurantData.each_with_index do |value, index|
     expect(restaurants[index]).to have_text value["nome"].upcase

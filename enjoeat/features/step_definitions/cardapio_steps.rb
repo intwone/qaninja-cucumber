@@ -1,13 +1,13 @@
 Dado("que acesso a lista de restaurantes") do
-  visit "/restaurants"
+  @restaurantListPage.loadPage
 end
 
 Quando("eu escolho o restaurante {string}") do |restaurante|
-  find(".restaurant-item", text: restaurante.upcase).click # passando como parâmetro os restaurantes
+  @restaurantListPage.gotoRestaurant(restaurante)
 end
 
 Então("vejo os seguintes itens disponíveis no cardapío:") do |table|
-  allItems = all(".menu-item-info-box") # seleciona todos os elementos que contém a div ".menu-item-info-box"
+  allItems = @restaurantMenuPage.menuListRestaurant
 
   productData = table.hashes # productData recebe a tabela da em formato de array[]
 
@@ -20,7 +20,7 @@ end
 
 Então("eu vejo as seguintes informações adicionais") do |table|
   infos = table.rows_hash # row_hash: utilizado para tabelas do tipo chave-valor
-  detail = find("#detail") # busca todos os elementos contidos na class ".detail"
+  detail = @restaurantMenuPage.details
   expect(detail).to have_text infos["categoria"]
   expect(detail).to have_text infos["descricao"]
   expect(detail).to have_text infos["horarios"]

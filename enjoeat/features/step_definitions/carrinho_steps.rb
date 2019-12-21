@@ -8,16 +8,16 @@ end
 
 Quando("eu adiciono {int} unidade\\(s)") do |quantidade|
   quantidade.times do
-    find(".menu-item-info-box", text: @productName.upcase).find(".add-to-cart").click
+    @restaurantMenuPage.addToCart(@productName)
   end
 end
 
 Então("deve ser adicionado {int} unidade\\(s) deste item") do |quantidade|
-  expect(@cart.carBox).to have_text "(#{quantidade}x) #{@productName}"
+  expect(@restaurantMenuPage.cart.carBox).to have_text "(#{quantidade}x) #{@productName}"
 end
 
 Então("o valor total deve ser de {string}") do |totalValue|
-  expect(@cart.totalCart.text).to eql totalValue
+  expect(@restaurantMenuPage.cart.totalCart.text).to eql totalValue
 end
 
 # Lista de produtos
@@ -29,14 +29,14 @@ end
 Quando("eu adiciono todos os itens") do
   @productList.each do |produto| # para cada produto vindo da variável @productList, faça:
     produto["quantidade"].to_i.times do
-      find(".menu-item-info-box", text: produto["nome"].upcase).find(".add-to-cart").click
+      @restaurantMenuPage.addToCart(produto["nome"])
     end
   end
 end
 
 Então("eu vejo todos os itens no carrinho") do
   @productList.each do |produto| # para cada produto vindo da variável @productList, faça:
-    expect(@cart.carBox).to have_text "(#{produto["quantidade"]}x) #{produto["nome"]}" # espero que na div "#cart" contenha o texto (1x produto)
+    expect(@restaurantMenuPage.cart.carBox).to have_text "(#{produto["quantidade"]}x) #{produto["nome"]}" # espero que na div "#cart" contenha o texto (1x produto)
   end
 end
 
@@ -52,12 +52,12 @@ Dado("que eu tenho os seguintes itens no carrinho:") do |table|
 end
 
 Quando("eu removo somente o {int}") do |item|
-  @cart.removeItem(item)
+  @restaurantMenuPage.cart.removeItem(item)
 end
 
 Quando("eu removo todos os itens") do
   @productList.each_with_index do |value, index| # para linha da tabela, pega-se o valor e indice do array[]
-    @cart.removeItem(index)
+    @restaurantMenuPage.cart.removeItem(index)
   end
 end
 
@@ -66,5 +66,5 @@ Quando("eu limpo o carrinho") do
 end
 
 Então("vejo a seguinte mensagem no carrinho {string}") do |mensagem|
-  expect(@cart.carBox).to have_text mensagem
+  expect(@restaurantMenuPage.cart.carBox).to have_text mensagem
 end
