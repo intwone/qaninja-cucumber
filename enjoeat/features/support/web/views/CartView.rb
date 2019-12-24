@@ -16,4 +16,8 @@ class CartView
   def clearCart
     click_button "Limpar"
   end
+
+  def closeOrder
+    click_link "Fechar Pedido"
+  end
 end

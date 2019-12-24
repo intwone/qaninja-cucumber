@@ -2,11 +2,11 @@ class RestaurantMenuPage
   include Capybara::DSL
 
   def details
-    detail = find("#detail") # busca todos os elementos contidos na class ".detail"
+    find("#detail") # busca todos os elementos contidos na class ".detail"
   end
 
   def menuListRestaurant
-    allItems = all(".menu-item-info-box") # seleciona todos os elementos que contém a div ".menu-item-info-box"
+    all(".menu-item-info-box") # seleciona todos os elementos que contém a div ".menu-item-info-box"
   end
 
   def addToCart(productName)

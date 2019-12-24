@@ -62,9 +62,41 @@ Quando("eu removo todos os itens") do
 end
 
 Quando("eu limpo o carrinho") do
-  click_button "Limpar"
+  @restaurantMenuPage.cart.clearCart
 end
 
 Então("vejo a seguinte mensagem no carrinho {string}") do |mensagem|
   expect(@restaurantMenuPage.cart.carBox).to have_text mensagem
+end
+
+# concluindo a compra
+
+Dado("que adicionei os seguintes itens no carrinho:") do |table|
+  @productList = table.hashes
+
+  steps %{
+    Quando eu adiciono todos os itens
+  }
+end
+
+Quando("fecho o meu carrinho") do
+  @restaurantMenuPage.cart.closeOrder
+end
+
+Então("o valor deve constar um total de {string}") do |totalItems|
+  expect(
+    @validationOrderPage.costShipping[0]
+  ).to have_text totalItems
+end
+
+Então("o valor do frete deve ser igual a {string}") do |shipping|
+  expect(
+    @validationOrderPage.costShipping[1]
+  ).to have_text shipping
+end
+
+Então("o valor total da compra deve ser igual {string}") do |totalValue|
+  expect(
+    @validationOrderPage.costShipping[2]
+  ).to have_text totalValue
 end

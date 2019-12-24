@@ -1,6 +1,6 @@
 #language:pt
 
-@breadAndBakery @temp
+@breadAndBakery 
 
 Funcionalidade: Remover item do carrinho
   Para que eu possa manter o meu carrinho apenas com itens desejados

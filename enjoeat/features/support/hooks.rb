@@ -3,9 +3,14 @@ Before do
 
   @restaurantMenuPage = RestaurantMenuPage.new
   @restaurantListPage = RestaurantListPage.new
-  @cartPage = CartView.new
+  @validationOrderPage = ValidationOrderPage.new
+  # @cartPage = CartView.new
 end
 
 Before("@breadAndBakery") do
   visit "/restaurants/bread-bakery/menu"
+end
+
+Before("@greenFood") do
+  visit "/restaurants/green-food/menu"
 end
