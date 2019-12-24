@@ -1,6 +1,6 @@
 #language:pt
 
-@greenFood @testing
+@greenFood
 
 Funcionalidade: Finalizar pedido
   Para que eu possa receber o pedido no meu endereço
@@ -10,6 +10,7 @@ Funcionalidade: Finalizar pedido
   # BDD (Desenvolvimento guiado por comportamento) => voltado para o negócio
   # BDT (Teste guiado por comportamento) 
 
+  @smoke
   Cenario: Finalizar pedido com cartão refeição
     
     Dado que eu fechei o pedido com os itens:
