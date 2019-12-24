@@ -26,6 +26,6 @@ class ValidationOrderPage
   end
 
   def summary
-    find(".content")
+    find(".content") 
   end
 end
