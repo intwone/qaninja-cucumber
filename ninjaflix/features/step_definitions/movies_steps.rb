@@ -4,8 +4,9 @@ Dado("que {string} é um novo filme") do |movieCode|
   puts @movie
 end
 
-Quando("eu faç o cadastro deste filme") do
-  pending # Write code here that turns the phrase above into concrete actions
+Quando("eu faço cadastro deste filme") do
+  @moviePage.addNewMovie
+  @moviePage.createMovie(@movie)
 end
 
 Então("devo ver o novo filme na lista") do

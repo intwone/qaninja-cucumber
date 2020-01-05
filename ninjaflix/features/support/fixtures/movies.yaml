@@ -8,17 +8,17 @@ ultimato:
   cover: "ultimato.jpg"
 spider:
   title: "Homem Aranha Longe de Casa"
-  status: "Pré-Venda"
+  status: "Pré-venda"
   year: 2019
   realeaseDate: "04/07/2019"
-  cast: ["Tom Holland, Samuel L. Jackson, Marisa Tomei"]
+  cast: ["Tom Holland", "Samuel L. Jackson", "Marisa Tomei"]
   overview: "Peter Parker está em uma viagem pela Europa e é convidado por Nick Fury para uma missão"
   cover: "spider.jpg"
-joker:
+jocker:
   title: "Coringa"
   status: "Em breve"
   year: 2019
   realeaseDate: "04/07/2019"
-  cast: ["Joaquin Pheonix  "]
+  cast: ["Joaquin Pheonix"]
   overview: "O comediante falido Arthur Fleck encontra violento bandidos pelas ruas de Gothan City"
   cover: "coringa.jpg"

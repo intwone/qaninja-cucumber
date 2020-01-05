@@ -1,6 +1,6 @@
 Quando("eu faço o login com {string} e {string}") do |email, password|
-  @login.goToApplication
-  @login.loginInPage(email, password)
+  @loginPage.goToApplication
+  @loginPage.loginInPage(email, password)
 end
 
 Então("devo ser autenticado") do
@@ -19,5 +19,5 @@ Então("não devo ser autenticado") do
 end
 
 Então("devo ver a mensagem de alerta {string}") do |alert|
-  expect(@login.alertMessage).to eql alert
+  expect(@loginPage.alertMessage).to eql alert
 end

@@ -1,5 +1,6 @@
 #language:pt
 
+@login
 Funcionalidade: Cadastrar filmes
   Para que eu possa disponibilizar novos títulos no catálogo
   Sendo um gestor de catálogo
@@ -11,13 +12,13 @@ Funcionalidade: Cadastrar filmes
     e um novo registro é inserido no catálogo Ninjaflix
 
     Dado que <codigo> é um novo filme
-    Quando eu faç o cadastro deste filme
+    Quando eu faço cadastro deste filme
     Então devo ver o novo filme na lista
 
     Exemplos: 
-     | codigo      |
-     | "ultimato"  |
-     | "spider"    |
-     | "jocker"    |
+      | codigo      |
+      | "ultimato"  |
+      | "spider"    |
+      | "jocker"    |
 
 
