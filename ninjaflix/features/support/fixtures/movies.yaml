@@ -22,3 +22,37 @@ jocker:
   cast: ["Joaquin Pheonix"]
   overview: "O comediante falido Arthur Fleck encontra violento bandidos pelas ruas de Gothan City"
   cover: "coringa.jpg"
+noTitle:
+  title: ""
+  status: "Disponível"
+  year: 2020
+  releaseData: "01/12/2020"
+  cast: []
+  overview: ""
+  cover: ""
+noStatus:
+  title: "Filme Teste"
+  status: ""
+  year: 2020
+  releaseData: "01/12/2020"
+  cast: []
+  overview: ""
+  cover: ""
+noYear:
+  title: "Filme Teste"
+  status: "Disponível"
+  year: ""
+  releaseData: "01/12/2020"
+  cast: []
+  overview: ""
+  cover: ""
+noRealeaseDate:
+  title: "Filme Teste"
+  status: "Em breve"
+  year: 2019
+  releaseData: ""
+  cast: []
+  overview: ""
+  cover: ""
+
+

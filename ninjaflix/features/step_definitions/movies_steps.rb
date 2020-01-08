@@ -1,7 +1,6 @@
 Dado("que {string} é um novo filme") do |movieCode|
   file = YAML.load_file(File.join(Dir.pwd, "features/support/fixtures/movies.yaml"))
   @movie = file[movieCode]
-  puts @movie
 end
 
 Quando("eu faço cadastro deste filme") do
@@ -10,5 +9,11 @@ Quando("eu faço cadastro deste filme") do
 end
 
 Então("devo ver o novo filme na lista") do
-  pending # Write code here that turns the phrase above into concrete actions
+  movie = @moviePage.movieColumn(@movie)
+  expect(movie).to have_text @movie["title"]
+  expect(movie).to have_text @movie["status"]
+end
+
+Então("devo ver a notificação {string}") do |expectAlert|
+  expect(@moviePage.alert).to eql expectAlert
 end

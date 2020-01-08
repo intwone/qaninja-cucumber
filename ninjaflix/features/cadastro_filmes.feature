@@ -9,7 +9,7 @@ Funcionalidade: Cadastrar filmes
   @newMovie
   Esquema do Cenário: Novo filme
     O gestor de catálogo cadastra um novo filme através do formulário
-    e um novo registro é inserido no catálogo Ninjaflix
+    e um novo registro é inserido no catálogo Ninjaflix.
 
     Dado que <codigo> é um novo filme
     Quando eu faço cadastro deste filme
@@ -21,4 +21,19 @@ Funcionalidade: Cadastrar filmes
       | "spider"    |
       | "jocker"    |
 
+  @attemptMovie
+  Esquema do Cenário: Campos obrigatórios
+    O gestor de catalogos tenta cadastrar um novo filme, mas esquece
+    de preencher um dos campos que são obrigatórios, em seguida, o sistema
+    exibe uma notificação para o usuário.
 
+    Dado que <codigo> é um novo filme
+    Quando eu faço cadastro deste filme
+    Então devo ver a notificação <texto>
+
+    Exemplos: 
+      | codigo                 | texto                                           |
+      | "noTitle"              | "Oops - Filme sem titulo. Pode isso Arnaldo?"   |
+      | "noStatus"             | "Oops - O status deve ser informado!"           |
+      | "noYear"               | "Oops - Faltou o ano de lançamento também!"     |
+      | "noRealeaseDate"       | "Oops - Quase lá, só falta a data de estréia!"  |
