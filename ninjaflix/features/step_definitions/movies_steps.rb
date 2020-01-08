@@ -1,6 +1,7 @@
 Dado("que {string} é um novo filme") do |movieCode|
   file = YAML.load_file(File.join(Dir.pwd, "features/support/fixtures/movies.yaml"))
   @movie = file[movieCode]
+  Database.new.deleteMovie(@movie["title"])
 end
 
 Quando("eu faço cadastro deste filme") do
