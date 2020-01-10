@@ -2,7 +2,7 @@ ultimato:
   title: "Vingadores Ultimato"
   status: "Disponível"
   year: 2019
-  realeaseDate: "24/04/2019"
+  releaseDate: "24/04/2019"
   cast: ["Robert Downey Jr", "Chris Evans", "Brie Larson", "Scarlett Johansson"]
   overview: "Após Thanos eliminar metade do universo, os vingadores terão que resolver esta treta."
   cover: "ultimato.jpg"
@@ -10,7 +10,7 @@ spider:
   title: "Homem Aranha Longe de Casa"
   status: "Pré-venda"
   year: 2019
-  realeaseDate: "04/07/2019"
+  releaseDate: "04/07/2019"
   cast: ["Tom Holland", "Samuel L. Jackson", "Marisa Tomei"]
   overview: "Peter Parker está em uma viagem pela Europa e é convidado por Nick Fury para uma missão"
   cover: "spider.jpg"
@@ -18,15 +18,23 @@ jocker:
   title: "Coringa"
   status: "Em breve"
   year: 2019
-  realeaseDate: "04/07/2019"
+  releaseDate: "04/07/2019"
   cast: ["Joaquin Pheonix"]
   overview: "O comediante falido Arthur Fleck encontra violento bandidos pelas ruas de Gothan City"
   cover: "coringa.jpg"
+deadpool2:
+  title: "Deadpool 2"
+  status: "Disponível"
+  year: 2018
+  releaseDate: "01/05/2018"
+  cast: ["Ryan Reynolds", "Josh Brolin"]
+  overview: "O super soldado Cable vem do futuro com a missão de detonar um jovem mutante e o Deadpool deve salvá-lo"
+  cover: ""
 noTitle:
   title: ""
   status: "Disponível"
   year: 2020
-  releaseData: "01/12/2020"
+  releaseDate: "01/12/2020"
   cast: []
   overview: ""
   cover: ""
@@ -34,7 +42,7 @@ noStatus:
   title: "Filme Teste"
   status: ""
   year: 2020
-  releaseData: "01/12/2020"
+  releaseDate: "01/12/2020"
   cast: []
   overview: ""
   cover: ""
@@ -42,7 +50,7 @@ noYear:
   title: "Filme Teste"
   status: "Disponível"
   year: ""
-  releaseData: "01/12/2020"
+  releaseDate: "01/12/2020"
   cast: []
   overview: ""
   cover: ""
@@ -50,7 +58,7 @@ noRealeaseDate:
   title: "Filme Teste"
   status: "Em breve"
   year: 2019
-  releaseData: ""
+  releaseDate: ""
   cast: []
   overview: ""
   cover: ""

@@ -40,7 +40,7 @@ class MoviePage
 
     find("input[name=year]").set movie["year"]
 
-    find("input[name=release_date]").set movie["realeaseDate"]
+    find("input[name=release_date]").set movie["releaseDate"]
 
     addCast(movie["cast"])
 
