@@ -24,3 +24,34 @@ Então("devo ver a notificação {string}") do |expectAlert|
   expect(@moviePage.alert).to eql expectAlert
   sleep 5
 end
+
+Dado("que {string} está no catálogo") do |movieCode|
+  steps %(
+    Dado que "#{movieCode}" é um novo filme
+    E este filme já existe no catálogo
+  )
+end
+
+Quando("eu solicito a exclusão") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Quando("eu confirmo a solicitação") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Então("este item deve ser removido do catálogo") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Dado("que {string} faz parte do catálogo") do |string|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Quando("cancelo a solicitação") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Então("este item deve permanecer no catálogo") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
