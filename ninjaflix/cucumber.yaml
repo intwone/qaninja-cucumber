@@ -1,5 +1,9 @@
 ---
-default: -p dev
+default: -p dev -p headless
 dev: ENV_TYPE=dev
 devToolbox: ENV_TYPE=devToolbox
 hmg: ENV_TYPE=hmg
+firefox: BROWSER=firefox
+firefoxHeadless: BROWSER=firefoxHeadless
+chrome: BROWSER=chrome
+chromeHeadless: BROWSER=chromeHeadless
