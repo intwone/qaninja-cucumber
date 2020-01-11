@@ -15,7 +15,7 @@ Quando("eu faço cadastro deste filme") do
 end
 
 Então("devo ver o novo filme na lista") do
-  movie = @moviePage.movieColumn(@movie)
+  movie = @moviePage.movieColumn(@movie["title"])
   expect(movie).to have_text @movie["title"]
   expect(movie).to have_text @movie["status"]
 end
@@ -26,32 +26,28 @@ Então("devo ver a notificação {string}") do |expectAlert|
 end
 
 Dado("que {string} está no catálogo") do |movieCode|
-  steps %(
+  steps %{
     Dado que "#{movieCode}" é um novo filme
     E este filme já existe no catálogo
-  )
+  }
 end
 
 Quando("eu solicito a exclusão") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @moviePage.remove(@movie["title"])
 end
 
 Quando("eu confirmo a solicitação") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @moviePage.switchAlertConfirm
 end
 
 Então("este item deve ser removido do catálogo") do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Dado("que {string} faz parte do catálogo") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@moviePage.hasNoMovie(@movie["title"])).to be true
 end
 
 Quando("cancelo a solicitação") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @moviePage.switchAlertCancel
 end
 
 Então("este item deve permanecer no catálogo") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@moviePage.hasNoMovie(@movie["title"])).to be false
 end

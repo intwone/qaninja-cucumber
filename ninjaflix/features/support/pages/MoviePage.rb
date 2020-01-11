@@ -52,13 +52,29 @@ class MoviePage
     find("#create-movie").click
   end
 
-  # método para busca a coluna desejada para validação do cenário
-  def movieColumn(movie)
-    find("table tbody tr", text: movie["title"])
-  end
-
   # método para buscar o texto contido na classe alert
   def alert
     find(".alert").text
+  end
+
+  # método para busca a coluna desejada para validação do cenário
+  def movieColumn(title)
+    find("table tbody tr", text: title)
+  end
+
+  def remove(title)
+    movieColumn(title).find(".btn-trash").click
+  end
+
+  def switchAlertConfirm
+    find(".swal2-confirm").click
+  end
+
+  def switchAlertCancel
+    find(".swal2-cancel").click
+  end
+
+  def hasNoMovie(title)
+    page.has_no_css?("table tbody tr", text: title)
   end
 end

@@ -38,6 +38,14 @@ dbz:
   cast: []
   overview: ""
   cover: "dbz.jpg"
+tenThings:
+  title: "10 coisas que eu odeio em você"
+  status: "Disponível"
+  year: 1999
+  releaseDate: "01/12/1999"
+  cast: []
+  overview: ""
+  cover: ""
 noTitle:
   title: ""
   status: "Disponível"
