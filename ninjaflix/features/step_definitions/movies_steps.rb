@@ -11,7 +11,6 @@ end
 Quando("eu faço cadastro deste filme") do
   @moviePage.addNewMovie
   @moviePage.movieAddView.createMovie(@movie)
-  sleep 5
 end
 
 Então("devo ver o novo filme na lista") do

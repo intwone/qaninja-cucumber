@@ -1,6 +1,10 @@
 class MoviePage
   include Capybara::DSL
 
+  def initialize
+    @movieList = "table tbody tr"
+  end
+
   def movieAddView
     MovieAddView.new
   end
@@ -16,7 +20,7 @@ class MoviePage
 
   # método para busca a coluna desejada para validação do cenário
   def movieColumn(title)
-    find("table tbody tr", text: title)
+    find(@movieList, text: title)
   end
 
   def remove(title)
@@ -24,10 +28,10 @@ class MoviePage
   end
 
   def hasNoMovie(title)
-    page.has_no_css?("table tbody tr", text: title)
+    page.has_no_css?(@movieList, text: title)
   end
 
   def hasMovie(title)
-    page.has_css?("table tbody tr", text: title)
+    page.has_css?(@movieList, text: title)
   end
 end

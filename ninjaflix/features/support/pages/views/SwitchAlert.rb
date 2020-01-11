@@ -1,5 +1,5 @@
 class SwitchAlert
-  include::DSL
+  include Capybara::DSL
 
   def alertConfirm
     find(".swal2-confirm").click
