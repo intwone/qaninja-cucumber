@@ -1,0 +1,15 @@
+---
+url: "http://192.168.99.100:8080"
+database: 
+  host: "192.168.99.100"
+  dbname: "nflix"
+  user: "postgres"
+  password: "qaninja-tool"
+users: 
+  catManager: 
+    email: "tool@stark.com"
+    password: "pwd123"
+  admin:
+    email: "admin@nflix.com"
+    password: "admin123"
+    

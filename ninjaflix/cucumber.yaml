@@ -1,0 +1,5 @@
+---
+default: -p dev
+dev: ENV_TYPE=dev
+devToolbox: ENV_TYPE=devToolbox
+hmg: ENV_TYPE=hmg

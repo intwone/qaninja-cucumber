@@ -11,9 +11,12 @@ Before do
 end
 
 Before("@login") do
+  # variavel para chamar as configurações de usuário
+  user = CONFIG["users"]["catManager"]
+
   # chama o método goToApplication da classe LoginPage
   @loginPage.goToApplication
 
   # chama o método loginInPage passando o login de acesso para a aplicação
-  @loginPage.loginInPage("tony@stark.com", "pwd123")
+  @loginPage.loginInPage(user["email"], user["password"])
 end
