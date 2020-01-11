@@ -1,0 +1,6 @@
+Ferramentas para trabalhar com CI (Continuos Integration)
+  - Jenkins
+  - CircleCI
+  - Azure DevOps
+  - Bitbucket Pipelines
+  - Gitlab

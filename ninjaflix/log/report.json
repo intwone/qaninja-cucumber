@@ -1,0 +1,104 @@
+[
+  {
+    "uri": "features/login.feature",
+    "id": "login",
+    "keyword": "Funcionalidade",
+    "name": "Login",
+    "description": "  Para que eu possa gerenciar os filmes do catalogo ninjaflix\n  Sendo um usuário previamente cadastrado\n  Posso acessar o sistema com o meu e-mail e senha",
+    "line": 3,
+    "elements": [
+      {
+        "id": "login;acesso",
+        "keyword": "Cenario",
+        "name": "Acesso",
+        "description": "",
+        "line": 9,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@loginSuccess",
+            "line": 8
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.30.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33126
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.30.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32484
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 634473118
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "eu faço o login com \"tony@stark.com\" e \"pwd123\"",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3658452243
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "devo ser autenticado",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1028229276
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "devo ver \"Tony Stark\" na area logada",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42669475
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "capybara-3.30.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 134870414
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

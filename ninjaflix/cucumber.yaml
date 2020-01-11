@@ -1,9 +1,25 @@
 ---
-default: -p dev -p headless
+# enviroment config
+default: -p dev -p chromeHeadless -p html -p progress
+ci: -p dev -p chromeHeadless -p json -p progress
 dev: ENV_TYPE=dev
 devToolbox: ENV_TYPE=devToolbox
 hmg: ENV_TYPE=hmg
+
+# browser config
 firefox: BROWSER=firefox
 firefoxHeadless: BROWSER=firefoxHeadless
 chrome: BROWSER=chrome
 chromeHeadless: BROWSER=chromeHeadless
+
+# report generation
+html: --format html --out=log/report.html
+json: --format json --out=log/report.json
+
+# exec config
+pretty: --format pretty
+progress: --format progress
+
+# Continuos Integration
+
+
