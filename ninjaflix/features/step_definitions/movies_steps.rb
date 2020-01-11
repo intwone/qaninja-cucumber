@@ -10,7 +10,7 @@ end
 
 Quando("eu faço cadastro deste filme") do
   @moviePage.addNewMovie
-  @moviePage.createMovie(@movie)
+  @moviePage.movieAddView.createMovie(@movie)
   sleep 5
 end
 
@@ -21,7 +21,7 @@ Então("devo ver o novo filme na lista") do
 end
 
 Então("devo ver a notificação {string}") do |expectAlert|
-  expect(@moviePage.alert).to eql expectAlert
+  expect(@moviePage.movieAddView.alert).to eql expectAlert
   sleep 5
 end
 
@@ -37,7 +37,7 @@ Quando("eu solicito a exclusão") do
 end
 
 Quando("eu confirmo a solicitação") do
-  @moviePage.switchAlertConfirm
+  @moviePage.switchAlert.alertConfirm
 end
 
 Então("este item deve ser removido do catálogo") do
@@ -45,9 +45,9 @@ Então("este item deve ser removido do catálogo") do
 end
 
 Quando("cancelo a solicitação") do
-  @moviePage.switchAlertCancel
+  @moviePage.switchAlert.alertCancel
 end
 
 Então("este item deve permanecer no catálogo") do
-  expect(@moviePage.hasNoMovie(@movie["title"])).to be false
+  expect(@moviePage.hasMovie(@movie["title"])).to be true
 end
