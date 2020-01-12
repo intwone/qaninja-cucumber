@@ -20,3 +20,18 @@ Before("@login") do
   # chama o método loginInPage passando o login de acesso para a aplicação
   @loginPage.loginInPage(user["email"], user["password"])
 end
+
+After do |scenario|
+  #  pega as evidências somente se o cenário falhar
+  #  if.scenario.failed?
+  #   implementação...
+  #  end
+
+  tempShot = page.save_screenshot("log/temp_shot.png")
+
+  # converte a screenshot para o formato base64
+  screenshot = Base64.encode64(File.open(tempShot).read)
+
+  # anexa um screenshot no relatório
+  embed(screenshot, "image/png", "Screenshot")
+end
