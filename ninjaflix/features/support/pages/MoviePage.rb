@@ -1,6 +1,4 @@
-class MoviePage
-  include Capybara::DSL
-
+class MoviePage < IncludeCap
   def initialize
     @movieList = "table tbody tr"
   end

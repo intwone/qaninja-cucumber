@@ -1,6 +1,4 @@
-class MovieAddView
-  include Capybara::DSL
-
+class MovieAddView < IncludeCap
   # método para preencher todos os campos necessários para adicionar um filme
   def createMovie(movie)
     find("input[name=title]").set movie["title"]

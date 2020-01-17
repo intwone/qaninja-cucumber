@@ -1,6 +1,4 @@
-class SideBarView
-  include Capybara::DSL
-
+class SideBarView < IncludeCap
   def loggedUser
     user = find(".sidebar-wrapper .user .info span").text
   end

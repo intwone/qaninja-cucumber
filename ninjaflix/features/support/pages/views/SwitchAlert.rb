@@ -1,6 +1,4 @@
-class SwitchAlert
-  include Capybara::DSL
-
+class SwitchAlert < IncludeCap
   def alertConfirm
     find(".swal2-confirm").click
   end

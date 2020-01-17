@@ -1,6 +1,4 @@
-class LoginPage
-  include Capybara::DSL
-
+class LoginPage < IncludeCap
   # método para visitar a página raiz do projeto (login)
   def goToApplication
     visit "/"

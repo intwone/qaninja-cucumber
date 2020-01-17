@@ -1,6 +1,6 @@
 ---
 # enviroment config
-default: -p dev -p chromeHeadless -p html -p progress
+default: -p dev -p firefox -p html -p progress
 ci: -p dev -p chromeHeadless -p json -p progress
 dev: ENV_TYPE=dev
 devToolbox: ENV_TYPE=devToolbox
